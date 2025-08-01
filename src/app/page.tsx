@@ -8,8 +8,9 @@ export default function Home() {
     <div className="space-y-32 mb-32">
       {/* Hero Section */}
       <section className="relative h-[90vh] flex items-center justify-center text-center">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 opacity-90"></div>
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"></div>
+          <div className="absolute inset-0 opacity-20 bg-grid-pattern"></div>
         </div>
         <div className="relative z-10 max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
@@ -24,15 +25,23 @@ export default function Home() {
               transition={{ delay: 0.2 }}
               className="text-4xl sm:text-6xl font-bold text-white mb-6"
             >
-              Hi, I'm <span className="text-yellow-300">Your Name</span>
+              Hi, I'm <span className="text-cyan-400">Your Name</span>
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="text-xl sm:text-2xl text-white mb-8"
+              className="text-xl sm:text-2xl text-gray-200 mb-4"
             >
-              A Full Stack Developer passionate about building web applications
+              Automating Infrastructure • Scaling Applications • Building Reliable Systems
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
+              className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"
+            >
+              Specializing in cloud infrastructure, CI/CD pipelines, and building scalable, resilient systems that empower teams to deliver faster.
             </motion.p>
             <motion.div 
               initial={{ opacity: 0 }}
