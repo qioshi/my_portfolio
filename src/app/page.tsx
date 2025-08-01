@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import AuroraBackground from '@/components/AuroraBackground';
 
 export default function Home() {
   return (
@@ -9,8 +10,10 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-[90vh] flex items-center justify-center text-center">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"></div>
-          <div className="absolute inset-0 opacity-20 bg-grid-pattern"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-gray-900 to-black"></div>
+          <div className="absolute inset-0">
+            <AuroraBackground />
+          </div>
         </div>
         <div className="relative z-10 max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
