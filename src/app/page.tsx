@@ -1,4 +1,7 @@
+'use client';
+
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 export default function Home() {
   return (
@@ -9,61 +12,141 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 opacity-90"></div>
         </div>
         <div className="relative z-10 max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl sm:text-6xl font-bold text-white mb-6">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <motion.h1 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              className="text-4xl sm:text-6xl font-bold text-white mb-6"
+            >
               Hi, I'm <span className="text-yellow-300">Your Name</span>
-            </h1>
-            <p className="text-xl sm:text-2xl text-white mb-8">
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4 }}
+              className="text-xl sm:text-2xl text-white mb-8"
+            >
               A Full Stack Developer passionate about building web applications
-            </p>
-            <div className="flex justify-center gap-4">
-              <a
+            </motion.p>
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6 }}
+              className="flex justify-center gap-4"
+            >
+              <motion.a
                 href="#projects"
-                className="bg-white text-blue-600 px-8 py-3 rounded-full font-medium hover:bg-blue-50 transition-colors"
+                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-medium"
+                whileHover={{ scale: 1.05, backgroundColor: 'rgba(255, 255, 255, 1)', color: '#2563eb' }}
+                transition={{ duration: 0.2 }}
               >
                 View My Work
-              </a>
-              <a
+              </motion.a>
+              <motion.a
                 href="#contact"
-                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-medium hover:bg-white hover:text-blue-600 transition-colors"
+                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-medium"
+                whileHover={{ scale: 1.05, backgroundColor: 'rgba(255, 255, 255, 1)', color: '#2563eb' }}
+                transition={{ duration: 0.2 }}
               >
                 Contact Me
-              </a>
-            </div>
-          </div>
+              </motion.a>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center mb-12">About Me</h2>
+      <motion.section 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        id="about" 
+        className="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8"
+      >
+        <motion.h2 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          viewport={{ once: true }}
+          className="text-3xl font-bold text-center mb-12"
+        >
+          About Me
+        </motion.h2>
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="text-lg text-gray-600 mb-6">
+            <motion.p 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.4 }}
+              viewport={{ once: true }}
+              className="text-lg text-gray-600 mb-6"
+            >
               I'm a passionate full-stack developer with experience in building web applications
               using modern technologies. I love solving complex problems and creating intuitive
               user experiences.
-            </p>
-            <p className="text-lg text-gray-600 mb-6">
+            </motion.p>
+            <motion.p 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.6 }}
+              viewport={{ once: true }}
+              className="text-lg text-gray-600 mb-6"
+            >
               My journey in web development started X years ago, and since then, I've worked
               on various projects ranging from small business websites to complex enterprise
               applications.
-            </p>
+            </motion.p>
           </div>
-          <div className="relative h-64 md:h-full">
+          <motion.div 
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            viewport={{ once: true }}
+            className="relative h-64 md:h-full"
+          >
             <div className="bg-gray-200 w-full h-full rounded-lg"></div>
             {/* Add your image here */}
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Projects Section */}
-      <section id="projects" className="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center mb-12">My Projects</h2>
+      <motion.section 
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        id="projects" 
+        className="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8"
+      >
+        <motion.h2 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          viewport={{ once: true }}
+          className="text-3xl font-bold text-center mb-12"
+        >
+          My Projects
+        </motion.h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Project Card */}
-          {[1, 2, 3].map((project) => (
-            <div key={project} className="bg-white rounded-lg shadow-lg overflow-hidden">
+          {[1, 2, 3].map((project, index) => (
+            <motion.div
+              key={project}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: index * 0.2, duration: 0.5 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.02 }}
+              className="bg-white rounded-lg shadow-lg overflow-hidden"
+            >
               <div className="relative h-48">
                 <div className="absolute inset-0 bg-gray-200"></div>
                 {/* Add project image here */}
@@ -93,10 +176,10 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </section>
+      </motion.section>
 
       {/* Skills Section */}
       <section id="skills" className="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
