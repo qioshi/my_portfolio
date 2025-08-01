@@ -28,7 +28,7 @@ export default function Home() {
               transition={{ delay: 0.2 }}
               className="text-4xl sm:text-6xl font-bold text-white mb-6"
             >
-              Hi, I'm <span className="text-cyan-400">Your Name</span>
+              Hi, I&apos;m <span className="text-cyan-400">Your Name</span>
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0 }}
@@ -36,7 +36,7 @@ export default function Home() {
               transition={{ delay: 0.4 }}
               className="text-xl sm:text-2xl text-gray-200 mb-4"
             >
-              Automating Infrastructure • Scaling Applications • Building Reliable Systems
+              Automating Infrastructure &bull; Scaling Applications &bull; Building Reliable Systems
             </motion.p>
             <motion.p
               initial={{ opacity: 0 }}
@@ -100,7 +100,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="text-lg text-gray-600 mb-6"
             >
-              I'm a passionate full-stack developer with experience in building web applications
+              I&apos;m a passionate full-stack developer with experience in building web applications
               using modern technologies. I love solving complex problems and creating intuitive
               user experiences.
             </motion.p>
@@ -111,7 +111,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="text-lg text-gray-600 mb-6"
             >
-              My journey in web development started X years ago, and since then, I've worked
+              My journey in web development started X years ago, and since then, I&apos;ve worked
               on various projects ranging from small business websites to complex enterprise
               applications.
             </motion.p>

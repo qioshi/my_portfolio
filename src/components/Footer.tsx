@@ -4,6 +4,7 @@ const Footer = () => {
       <div className="max-w-screen-xl mx-auto px-4">
         <div className="flex flex-col items-center justify-center">
           <div className="text-center mb-4">
+            {/* eslint-disable-next-line react/no-unescaped-entities */}
             <h3 className="text-2xl font-bold mb-2">Let's Connect</h3>
             <p className="text-gray-300">Feel free to reach out for collaborations or just a friendly chat</p>
           </div>
@@ -28,7 +29,8 @@ const Footer = () => {
             </a>
           </div>
           <div className="text-center text-gray-400">
-            <p>&copy; {new Date().getFullYear()} Your Name. All rights reserved.</p>
+            {/* eslint-disable-next-line react/no-unescaped-entities */}
+            <p>&copy; {new Date().getFullYear()} Qioshi. Built with Next.js, Tailwind CSS, and Three.js. Inspired by Vercel's and other open portfolios.</p>
           </div>
         </div>
       </div>
